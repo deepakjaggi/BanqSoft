@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ConsoleApp1.Models
 {
-    class LoanType
+    public class LoanType
     {
-        private int loanType;
-        private String loanText;
+        public int loanType;
+        public String loanText;
         public int getLoanType()
         {
             return loanType;

@@ -4,13 +4,21 @@ using System.Text;
 
 namespace ConsoleApp1.Models
 {
-    class Payment
+    public class Payment
     {
 
         private int numOfPayments;
         private double amount;
         private double interest;
-        private double total;
+        private double total;        
+
+        public Payment(int v1, double v2, double v3, double v4)
+        {
+            this.numOfPayments = v1;
+            this.amount = v2;
+            this.interest= v3;
+            this.total = v4;
+        }
 
         public int getNumOfPayments()
         {
