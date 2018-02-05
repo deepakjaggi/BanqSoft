@@ -5,18 +5,20 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    public class BanqServiceClass
+    public interface IserviceInterface
     {
-        public BanqServiceClass()
-        {
-
-        }
+        double GetInterest(int LoanType);
+        List<LoanType> GetLoanTypes();
+        List<Payment> ReturnPayment(double TotalAmount, int NumberOfYears, double Interest);       
+    }
+    public class ServiceClass : IserviceInterface
+    {
         public double GetInterest(int LoanType)
         {
             return 0.0;
         }
 
-        public virtual List<LoanType> GetLoanTypes()
+        public virtual  List<LoanType> GetLoanTypes()
         {
             return null;
         }
@@ -25,14 +27,5 @@ namespace ConsoleApp1
         {
             return null;
         }
-    }
-
-    public class Utility
-    {
-        public virtual List<LoanType> GetLoanTypes()
-        {
-            return null;
-        }
-
     }
 }
