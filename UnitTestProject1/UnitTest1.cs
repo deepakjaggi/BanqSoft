@@ -18,7 +18,6 @@ namespace UnitTestProject1
             MockData mdt = new MockData();
             serviceClass.Setup(r => r.GetLoanTypes()).Returns(mdt.getAllLoansList);            
             List<LoanType> ltypes = serviceClass.Object.GetLoanTypes();
-            Assert.AreEqual(ltypes.Count, 2);
-        }        
+            Assert.AreEqual(ltypes.Count, 2);        }        
     }
 }
