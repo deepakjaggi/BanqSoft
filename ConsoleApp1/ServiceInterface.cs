@@ -13,7 +13,7 @@ namespace ConsoleApp1
     }
     public class ServiceClass : IserviceInterface
     {
-        public double GetInterest(int LoanType)
+        public virtual double GetInterest(int LoanType)
         {
             return 0.0;
         }
@@ -23,7 +23,7 @@ namespace ConsoleApp1
             return null;
         }
 
-        public List<Payment> ReturnPayment(double TotalAmount, int NumberOfYears, double Interest)
+        public virtual List<Payment> ReturnPayment(double TotalAmount, int NumberOfYears, double Interest)
         {
             return null;
         }
